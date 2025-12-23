@@ -10,11 +10,8 @@ function getChats($id_1, $id_2, $conn){
     $stmt->execute([$id_1, $id_2, $id_1, $id_2]);
 
     if ($stmt->rowCount() > 0) {
-    	$chats = $stmt->fetchAll();
-    	return $chats;
-    }else {
-    	$chats = [];
-    	return $chats;
+        return $stmt->fetchAll();
+    } else {
+        return [];
     }
-
 }

@@ -8,7 +8,7 @@ $uName = "root";
 $pass = "";
 
 # database name
-$db_name = "chat_app_db";
+$db_name = "se-project";
 
 #creating database connection
 try {
