@@ -1,18 +1,12 @@
-<?php 
+<?php
+function opened($chat_with, $conn, $chats){
+    if (empty($chats)) return;
 
-function opened($id_1, $conn, $chats){
     foreach ($chats as $chat) {
-    	if ($chat['opened'] == 0) {
-    		$opened = 1;
-    		$chat_id = $chat['chat_id'];
-
-    		$sql = "UPDATE chats
-    		        SET   opened = ?
-    		        WHERE from_id=? 
-    		        AND   chat_id = ?";
+        if ($chat['to_id'] == $_SESSION['user_id'] && $chat['status'] < 2) {
+            $sql = "UPDATE chats SET status = 2 WHERE chat_id = ?";
             $stmt = $conn->prepare($sql);
-            $stmt->execute([$opened, $id_1, $chat_id]);
-
-    	}
+            $stmt->execute([$chat['chat_id']]);
+        }
     }
 }

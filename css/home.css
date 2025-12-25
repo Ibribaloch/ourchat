@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0b141a;
+}
+
+/* MAIN */
+.wa-container {
+    max-width: 420px;
+    height: 100vh;
+    margin: auto;
+    background: #111b21;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+.wa-header {
+    background: #202c33;
+    color: #fff;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logout-btn {
+    color: #aebac1;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* SEARCH */
+.wa-search {
+    background: #111b21;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.wa-search input {
+    width: 100%;
+    background: #202c33;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: #fff;
+    outline: none;
+}
+
+/* CHAT LIST */
+.wa-chat-list {
+    flex: 1;
+    overflow-y: auto;
+}
+
+/* CHAT ITEM */
+.wa-chat-item {
+    display: flex;
+    padding: 12px;
+    text-decoration: none;
+    color: #e9edef;
+    border-bottom: 1px solid #222;
+}
+
+.wa-chat-item:hover {
+    background: #202c33;
+}
+
+.avatar-box {
+    position: relative;
+}
+
+.online-dot {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    width: 10px;
+    height: 10px;
+    background: #00a884;
+    border-radius: 50%;
+    border: 2px solid #111b21;
+}
+
+/* CHAT INFO */
+.chat-info {
+    flex: 1;
+    margin-left: 12px;
+}
+
+.chat-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-name {
+    font-weight: 600;
+}
+
+.unread-dot {
+    width: 10px;
+    height: 10px;
+    background: #25d366;
+    border-radius: 50%;
+}
+
+.chat-last {
+    font-size: 13px;
+    color: #8696a0;
+    margin-top: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* EMPTY */
+.no-chat {
+    color: #8696a0;
+    text-align: center;
+    margin-top: 40px;
+}

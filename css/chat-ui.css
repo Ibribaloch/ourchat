@@ -1,0 +1,222 @@
+/* ===== RESET ===== */
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* ===== BODY ===== */
+body{
+	background:#0b141a;
+	height:100vh;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+/* ===== MAIN CONTAINER ===== */
+.wa-container{
+	width:100%;
+	max-width:420px;
+	height:100vh;
+	background:#0b141a;
+	display:flex;
+	flex-direction:column;
+}
+
+/* ===== HEADER ===== */
+.wa-header{
+	background:#202c33;
+	color:#e9edef;
+	display:flex;
+	align-items:center;
+	padding:10px;
+	gap:10px;
+	border-bottom:1px solid #2a3942;
+}
+
+.wa-header .back{
+	color:#00a884;
+	font-size:20px;
+	text-decoration:none;
+}
+
+.wa-header .avatar{
+	width:40px;
+	height:40px;
+	border-radius:50%;
+	object-fit:cover;
+}
+
+.wa-header .info{
+	display:flex;
+	flex-direction:column;
+}
+
+.wa-header .name{
+	font-size:15px;
+	font-weight:500;
+}
+
+.wa-header .status{
+	font-size:12px;
+	color:#8696a0;
+}
+
+/* ===== CHAT AREA ===== */
+.wa-chat{
+	flex:1;
+	padding:12px;
+	overflow-y:auto;
+	background:#0b141a;
+	display:flex;
+	flex-direction:column;
+	gap:6px;
+}
+
+/* ===== BUBBLES COMMON ===== */
+.bubble{
+	max-width:75%;
+	padding:8px 10px;
+	border-radius:8px;
+	font-size:14px;
+	line-height:1.4;
+	position:relative;
+	word-wrap:break-word;
+}
+
+/* ===== SENT ===== */
+.sent{
+	align-self:flex-end;
+	background:#005c4b;
+	color:#e9edef;
+	border-top-right-radius:0;
+}
+
+/* ===== RECEIVED ===== */
+.received{
+	align-self:flex-start;
+	background:#202c33;
+	color:#e9edef;
+	border-top-left-radius:0;
+}
+
+/* ===== MESSAGE TEXT ===== */
+.bubble .text{
+	white-space:pre-wrap;
+}
+
+/* ===== TIME ===== */
+.bubble .time{
+	font-size:11px;
+	color:#cfd4d7;
+	text-align:right;
+	margin-top:3px;
+}
+
+/* ===== IMAGE ===== */
+.chat-img{
+	max-width:220px;
+	border-radius:6px;
+	margin-top:5px;
+	cursor:pointer;
+}
+
+/* ===== INPUT AREA ===== */
+.wa-input{
+	background:#202c33;
+	padding:8px;
+	display:flex;
+	align-items:center;
+	gap:8px;
+	border-top:1px solid #2a3942;
+}
+
+.wa-input input[type="text"]{
+	flex:1;
+	background:#111b21;
+	border:none;
+	outline:none;
+	color:#e9edef;
+	padding:10px 12px;
+	border-radius:20px;
+	font-size:14px;
+}
+
+.wa-input button{
+	background:none;
+	border:none;
+	color:#00a884;
+	font-size:18px;
+	cursor:pointer;
+}
+
+/* ===== IMAGE MODAL ===== */
+.img-modal{
+	display:none;
+	position:fixed;
+	inset:0;
+	background:rgba(0,0,0,0.9);
+	z-index:999;
+	justify-content:center;
+	align-items:center;
+	flex-direction:column;
+}
+
+.img-modal img{
+	max-width:90%;
+	max-height:80%;
+	border-radius:8px;
+}
+
+.close-preview{
+	position:absolute;
+	top:15px;
+	right:20px;
+	font-size:28px;
+	color:#fff;
+	cursor:pointer;
+}
+
+#sendImageBtn{
+	margin-top:15px;
+	background:#00a884;
+	border:none;
+	color:#fff;
+	padding:10px 25px;
+	border-radius:20px;
+	font-size:14px;
+	cursor:pointer;
+}
+
+/* ===== SCROLLBAR ===== */
+.wa-chat::-webkit-scrollbar{
+	width:4px;
+}
+
+.wa-chat::-webkit-scrollbar-track{
+	background:#0b141a;
+}
+
+.wa-chat::-webkit-scrollbar-thumb{
+	background:#2a3942;
+	border-radius:10px;
+}
+
+.wa-chat::-webkit-scrollbar-thumb:hover{
+	background:#00a884;
+}
+.ticks{
+    font-size: 12px;
+    margin-left: 6px;
+    color: #999;
+}
+
+.ticks.seen{
+    color: #34b7f1; /* blue */
+}
+
+.ticks.delivered{
+    color: #aaa;
+}
